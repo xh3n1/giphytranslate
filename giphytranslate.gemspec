@@ -5,12 +5,12 @@ require "giphytranslate/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "giphytranslate"
-  spec.version       = '1.0.0'
+  spec.version       = '1.0.4'
   spec.authors       = ["Xheni Myrtaj (xh3n1)"]
   spec.email         = ["myrtajxheni@gmail.com"]
 
   spec.summary       = 'A plugin for adding Giphy GIFS on Jekyll sites'
-  spec.description   = 'The translate API draws on search, but uses the GIPHY special sauce to handle translating from one vocabulary to another. In this case, words and phrases to GIFs.'
+  spec.description   = 'A plugin that translates words to gifs'
   spec.homepage      = "https://github.com/xh3n1/giphytranslate"
   spec.license       = "MIT"
 

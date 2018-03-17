@@ -9,13 +9,13 @@ module Giphytranslate
 
     def initialize(tagName, markup, tokens)
       super
-        @tag = markup
+        @string = markup
 
     end
 
     def render(context)
 
-      uri = URI("http://api.giphy.com/v1/gifs/translate?api_key=#{@@public_api}&tag=#{@tag}")
+      uri = URI("http://api.giphy.com/v1/gifs/translate?api_key=#{@@public_api}&s=#{@string}")
       response = Net::HTTP.get(uri)
       json_response = JSON.parse(response)
       json_raw = json_response['data']
@@ -23,7 +23,7 @@ module Giphytranslate
       @image_width = json_raw['image_width']
       @image = json_raw['image_original_url']
 
-      "<img src=\"#{@image}\" height=\"#{@image_height}\" width=\"#{@image_width}\" alt=\"#{@tag}\">"
+      "<img src=\"#{@image}\" height=\"#{@image_height}\" width=\"#{@image_width}\" alt=\"#{@string}\">"
 
 
     end
