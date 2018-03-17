@@ -5,23 +5,14 @@ require "giphytranslate/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "giphytranslate"
-  spec.version       = Giphytranslate::VERSION
-  spec.authors       = ["xh3n1"]
+  spec.version       = '1.0.0'
+  spec.authors       = ["Xheni Myrtaj (xh3n1)"]
   spec.email         = ["myrtajxheni@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'A plugin for adding Giphy GIFS on Jekyll sites'
+  spec.description   = 'The translate API draws on search, but uses the GIPHY special sauce to handle translating from one vocabulary to another. In this case, words and phrases to GIFs.'
+  spec.homepage      = "https://github.com/xh3n1/giphytranslate"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})

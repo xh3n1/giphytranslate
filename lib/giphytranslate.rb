@@ -1,5 +1,33 @@
 require "giphytranslate/version"
+require 'net/http'
+require 'json'
 
 module Giphytranslate
-  # Your code goes here...
-end
+  class Giphy < Liquid::Tag
+
+    @@public_api = "akShN2GUsrLFyoLw48jf9phWzLC5zkQS"
+
+    def initialize(tagName, markup, tokens)
+      super
+        @tag = markup
+
+    end
+
+    def render(context)
+
+      uri = URI("http://api.giphy.com/v1/gifs/translate?api_key=#{@@public_api}&tag=#{@tag}")
+      response = Net::HTTP.get(uri)
+      json_response = JSON.parse(response)
+      json_raw = json_response['data']
+      @image_height = json_raw['image_height']
+      @image_width = json_raw['image_width']
+      @image = json_raw['image_original_url']
+
+      "<img src=\"#{@image}\" height=\"#{@image_height}\" width=\"#{@image_width}\" alt=\"#{@tag}\">"
+
+
+    end
+  end
+  end
+
+  Liquid::Template.register_tag('giphy', Giphytranslate::Giphy)
