@@ -1,5 +1,6 @@
 # Giphytranslate
 
+Powered by Giphy.
 
 ## Installation
 
