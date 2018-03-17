@@ -1,5 +1,7 @@
 # Giphytranslate
 
+A jekyll plugin for embedding Giphy gifs in your jekyll site.
+
 Powered by Giphy.
 
 ## Installation
