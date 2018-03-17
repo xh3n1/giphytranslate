@@ -1,4 +1,4 @@
-# Giphytranslate
+# Giphytranslate [![Gem Version](https://badge.fury.io/rb/giphytranslate.svg)](https://badge.fury.io/rb/giphytranslate)
 
 A jekyll plugin for embedding Giphy gifs in your jekyll site.
 
